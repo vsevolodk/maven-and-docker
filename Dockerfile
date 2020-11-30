@@ -1,9 +1,9 @@
-FROM docker:stable
+FROM docker:dind
 
 RUN apk add --no-cache \
         bash \
         maven \
-        openjdk11 --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community \
+        openjdk14-jdk --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
         git
 
 ENTRYPOINT ["docker-entrypoint.sh"]
